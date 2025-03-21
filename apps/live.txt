@@ -1,0 +1,17 @@
+websocket url = wss://custrep-124zh033.livekit.cloud
+
+API KEY = APIKDHe2seubj7t
+API SECRET = JqIBDXTuemYdcSpJBfIkWeJEBu28L8T2c2sZx93jaevB
+
+
+
+ENV = 
+
+LIVEKIT_URL=wss://custrep-124zh033.livekit.cloud
+LIVEKIT_API_KEY=APIKDHe2seubj7t
+LIVEKIT_API_SECRET=JqIBDXTuemYdcSpJBfIkWeJEBu28L8T2c2sZx93jaevB
+
+
+SIP URL = sip:j199zoj8i1x.sip.livekit.cloud
+PROJECT URL = wss://custrep-124zh033.livekit.cloud
+PROJECT NAME  = CustRep
