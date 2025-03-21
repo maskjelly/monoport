@@ -1,0 +1,33 @@
+{
+  "id": "9b3c139d-5774-4653-8487-bba8e1daea99",
+  "createdAt": "2025-03-14T10:28:55.537Z",
+  "updatedAt": "2025-03-21T02:16:10.485Z",
+  "type": "function",
+  "function": {
+    "name": "setAppointments",
+    "strict": false,
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "Name": {
+          "description": "GOD NIGGAS",
+          "type": "string"
+        },
+        "Phone_Number": {
+          "description": "1234098711",
+          "type": "number"
+        }
+      },
+      "required": [
+        "Name",
+        "Phone_Number"
+      ]
+    }
+  },
+  "messages": [],
+  "orgId": "10871e05-9801-4351-b4fa-e58ed04ccc8a",
+  "server": {
+    "url": "https://backend.aaryan-539.workers.dev/functions"
+  },
+  "async": false
+}

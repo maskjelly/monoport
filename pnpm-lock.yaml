@@ -20,12 +20,18 @@ importers:
 
   apps/backend:
     dependencies:
+      '@prisma/client':
+        specifier: ^6.5.0
+        version: 6.5.0(prisma@6.5.0(typescript@5.8.2))(typescript@5.8.2)
       '@repo/shared':
         specifier: workspace:*
         version: link:../../packages/shared
       hono:
         specifier: ^4.7.4
         version: 4.7.4
+      prisma:
+        specifier: ^6.5.0
+        version: 6.5.0(typescript@5.8.2)
     devDependencies:
       '@cloudflare/vitest-pool-workers':
         specifier: ^0.7.5
