@@ -1,13 +1,9 @@
 import { ToolCall, RequestBodyMessage, finalData } from "@repo/shared/lib/types"
 import { Hono } from "hono";
 import { cors } from "hono/cors";
-import { getPrismaClient } from "@repo/shared/prisma";
 
 const app = new Hono();
-interface Env {
-    PRISMA_ACCELERATE_BASE_URL: string;
-    PRISMA_ACCELERATE_API_KEY: string;
-  }
+
 app.use(cors());
 
 const extractToolCallData = (obj: unknown): ToolCall | null => {
@@ -57,21 +53,6 @@ app.post("/functions", async (c) => {
 
     const name = args.Name || body.message?.customer?.name || "No name provided";
     const phoneNumber = args.Phone_Number || body.message?.phoneNumber || "No phone number provided";
-    const prisma = getPrismaClient(c.env);
-    try { 
-        const user = await prisma.clientBookings.create ({
-            data : {
-                name : name || "Error Catching name ",
-                phoneNumber : phoneNumber || "Error catching phone numnber",
-            }
-        })
-        console.log(name);
-        console.log(phoneNumber);
-    }catch(error){
-        console.error(error)
-        console.log("WHAT THE FUCK  , will try again later ")
-    }
-
 
     console.log(`Extracted Name: ${name}, Phone Number: ${phoneNumber}`);
 
