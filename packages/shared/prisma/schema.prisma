@@ -1,0 +1,22 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+}
+
+// model User {
+  //email          String
+  //userId         Int      @id @default(autoincrement())
+  //clients        ClientBookings[]  // One-to-many relationship with ClientBookings
+//}
+
+model ClientBookings {
+  id             Int      @id @default(autoincrement())
+  name           String
+  phoneNumber    String
+ // user           User     @relation(fields: [userId], references: [userId])
+//  userId         Int      // Foreign key referencing User
+}

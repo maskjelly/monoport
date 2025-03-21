@@ -1,0 +1,20 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "backend",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-03-17",
+	"observability": {
+		"enabled": true
+	},
+	/**
+	 * Environment Variables
+	 * https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
+	 */
+	"vars": {
+		"PRISMA_ACCELERATE_BASE_URL": "prisma+postgres://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiNzhhYTQ5MmUtMmFjNC00NzljLWIxYjEtYmU3NTJlMDYxNmU0IiwidGVuYW50X2lkIjoiMDRlZDA4NDQ2M2I3YmExOTQ3MDkwYzc4ZTRiOGFlYjI0MGQ4ZDhkMWQwNzM5ZmI0OGE3YjEyZjE5MThjMGY4OCIsImludGVybmFsX3NlY3JldCI6ImQ0MzI4MWFiLTk3OGQtNGEzYy1hZWZlLTczMzczZmIxODcwNSJ9.svGcvc25XcnARdSW8MbqtbI4ueDe-MJdBzxLXXGoK7g"
+	}
+}

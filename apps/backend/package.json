@@ -1,0 +1,25 @@
+{
+	"name": "backend",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"deploy": "wrangler deploy",
+		"dev": "wrangler dev",
+		"start": "wrangler dev",
+		"test": "vitest",
+		"cf-typegen": "wrangler types",
+		"build" : "esbuild src/index.ts --bundle --outdir=dist"
+	},
+	"devDependencies": {
+		"@cloudflare/vitest-pool-workers": "^0.7.5",
+		"@cloudflare/workers-types": "^4.20250317.0",
+		"esbuild": "^0.25.1",
+		"typescript": "^5.5.2",
+		"vitest": "~3.0.7",
+		"wrangler": "^4.2.0"
+	},
+	"dependencies": {
+		"@repo/shared": "workspace:*",
+		"hono": "^4.7.4"
+	}
+}

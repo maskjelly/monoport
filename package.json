@@ -1,5 +1,6 @@
 {
   "name": "CustRep",
+  "workspaces": ["apps/*", "packages/*"],
   "private": true,
   "scripts": {
     "build": "turbo run build",
