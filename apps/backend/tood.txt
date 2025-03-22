@@ -1,3 +1,9 @@
 Add timer in the schema so that it can be sorted via time aswell
 servies tab so that it is knows what all services are desired by the client to be used 
 remove the liveKit and use VAPI only
+add a super admin where i can delete any client and user i want for now
+
+add Business capabilities also with relation to users 
+identify businessed with their twillio phone number ? thats the only way
+make all of this more user friendly 
+
