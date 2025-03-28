@@ -10,33 +10,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-slate-50 to-slate-100">
-      {/* Header */}
-      <header className="w-full py-4 px-6 border-b bg-white/80 backdrop-blur-sm fixed top-0 z-10">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-md bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold">CRM</span>
-            </div>
-            <span className="font-semibold text-xl">JetCal</span>
-          </div>
-          <div className="flex items-center gap-4">
-            {session ? (
-              <Link href="/dashboard">
-                <Button variant="ghost">Dashboard</Button>
-              </Link>
-            ) : (
-              <>
-                <Link href="/api/auth/signin">
-                  <Button variant="ghost">Log in</Button>
-                </Link>
-                <Link href="/api/auth/signin">
-                  <Button>Sign up free</Button>
-                </Link>
-              </>
-            )}
-          </div>
-        </div>
-      </header>
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">

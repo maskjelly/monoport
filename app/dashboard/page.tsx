@@ -168,12 +168,12 @@ export default function Dashboard() {
       <DashboardSidebar />
 
       <div className="flex-1 flex flex-col overflow-hidden">
-        <DashboardHeader />
-
         <main className="flex-1 overflow-y-auto p-6">
           <div className="max-w-7xl mx-auto space-y-6">
             {/* Calls Graph */}
-            <CallsChart />
+
+            {/* Do not add a call chart cause this is still controvertial in my mind */}
+            {/* <CallsChart /> */}
 
             {/* Dashboard Title and Actions */}
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">

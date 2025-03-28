@@ -109,16 +109,6 @@ export function DashboardSidebar() {
 
   return (
     <div className="w-64 border-r hidden md:flex flex-col h-screen">
-      {/* Logo */}
-      <div className="h-16 border-b flex items-center px-4">
-        <Link href="/dashboard" className="flex items-center gap-2">
-          <div className="h-8 w-8 rounded-md bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-bold">CRM</span>
-          </div>
-          <span className="font-semibold text-xl text-foreground">JetCal</span>
-        </Link>
-      </div>
-
       {/* Navigation */}
       <div className="flex-1 overflow-y-auto py-4 px-3 space-y-6">
         {/* Main Navigation */}

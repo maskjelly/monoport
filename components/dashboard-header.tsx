@@ -12,9 +12,10 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { useState } from "react"
+import Link from "next/link"
 
 export function DashboardHeader() {
-  const [theme, setTheme] = useState<"light" | "dark">("dark")
+  const [theme, setTheme] = useState<"light" | "dark">('dark')
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light"
@@ -28,9 +29,12 @@ export function DashboardHeader() {
         <Menu className="h-5 w-5" />
       </Button>
 
-      <div className="relative w-full max-w-md hidden md:flex">
-        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
-        <Input placeholder="Search..." className="pl-9" />
+      <div className="h-16 border-b flex items-center px-4">
+        <Link href="/dashboard" className="flex items-center gap-2">
+          <div className="h-8 w-8 rounded-md bg-primary flex items-center justify-center">
+          </div>
+          <span className="font-semibold text-xl text-foreground">JetCal</span>
+        </Link>
       </div>
 
       <div className="ml-auto flex items-center gap-3">
