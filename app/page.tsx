@@ -17,7 +17,7 @@ export default function Home() {
             <div className="h-8 w-8 rounded-md bg-primary flex items-center justify-center">
               <span className="text-primary-foreground font-bold">CRM</span>
             </div>
-            <span className="font-semibold text-xl">PrimeCRM</span>
+            <span className="font-semibold text-xl">JetCal</span>
           </div>
           <div className="flex items-center gap-4">
             {session ? (
@@ -142,7 +142,7 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-slate-700 mb-6 italic">
-                "PrimeCRM has transformed how we manage our client relationships. The interface is intuitive and the
+                "JetCal has transformed how we manage our client relationships. The interface is intuitive and the
                 automation features save us hours every week."
               </p>
               <div className="flex items-center gap-4">
@@ -172,7 +172,7 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-slate-700 mb-6 italic">
-                "We've tried several CRM solutions, but PrimeCRM stands out with its ease of use and powerful features.
+                "We've tried several CRM solutions, but JetCal stands out with its ease of use and powerful features.
                 Our team adopted it immediately."
               </p>
               <div className="flex items-center gap-4">
@@ -192,7 +192,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to transform your client relationships?</h2>
           <p className="text-xl mb-8 text-primary-foreground/90">
-            Join thousands of businesses that use PrimeCRM to grow their client base and increase revenue.
+            Join thousands of businesses that use JetCal to grow their client base and increase revenue.
           </p>
           <Link href="/api/auth/signin">
             <Button size="lg" variant="secondary" className="text-lg px-8 h-14 rounded-xl">

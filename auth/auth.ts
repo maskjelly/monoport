@@ -2,7 +2,6 @@ import { PrismaAdapter } from "@auth/prisma-adapter"
 import { prisma } from "@/db/prisma"
 import NextAuth from "next-auth";
 import Google from "next-auth/providers/google";
-// import SignIn from "@/app/api/auth/signin/sign-in";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   adapter: PrismaAdapter(prisma),
@@ -14,14 +13,30 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         params: {
           prompt: "consent",
           access_type: "offline",
-          scope: "openid email profile"
-        }
-      }
-    })
+          scope: "openid email profile",
+        },
+      },
+    }),
   ],
-  pages : {
-    signIn : "/signin"
+  session: {
+    strategy: "jwt", // Use JWT instead of database sessions
   },
-  // Add these additional configurations
+  callbacks: {
+    async jwt({ token, user }) {
+      // On initial login, add user data to the token
+      if (user) {
+        token.id = user.id;
+      }
+      return token;
+    },
+    async session({ session, token }) {
+      // Pass token data to the session
+      session.user.id = token.id as string;
+      return session;
+    },
+  },
+  pages: {
+    signIn: "/signin",
+  },
   secret: process.env.NEXTAUTH_SECRET,
 });

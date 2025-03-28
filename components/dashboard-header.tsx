@@ -14,7 +14,7 @@ import {
 import { useState } from "react"
 
 export function DashboardHeader() {
-  const [theme, setTheme] = useState<"light" | "dark">()
+  const [theme, setTheme] = useState<"light" | "dark">("dark")
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light"

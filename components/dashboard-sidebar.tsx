@@ -115,7 +115,7 @@ export function DashboardSidebar() {
           <div className="h-8 w-8 rounded-md bg-primary flex items-center justify-center">
             <span className="text-primary-foreground font-bold">CRM</span>
           </div>
-          <span className="font-semibold text-xl text-foreground">PrimeCRM</span>
+          <span className="font-semibold text-xl text-foreground">JetCal</span>
         </Link>
       </div>
 
