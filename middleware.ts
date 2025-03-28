@@ -8,10 +8,6 @@ export const config = {
 export function middleware(request: NextRequest) {
   const authSessionToken =
     request.cookies.get("authjs.session-token") ||
-    request.cookies.get("next-auth.session-token") ||
-    // request.cookies.get("__Secure-next-auth.session-token") ||
-    request.cookies.get("__Host-authjs.csrf-token") || 
-    request.cookies.get("__Secure-authjs.callback-url")
     request.cookies.get("__Secure-authjs.session-token")
 
   const url = request.nextUrl;
