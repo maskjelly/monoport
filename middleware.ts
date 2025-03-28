@@ -15,11 +15,8 @@ export function middleware(request: NextRequest) {
 
   const protectedRoutes = ["/dashboard"];
 
-  if (
-    !authSessionToken &&
-    protectedRoutes.some((route) => url.pathname.startsWith(route))
-  ) {
-    return NextResponse.redirect(new URL("/", url));
+  if (!authSessionToken && protectedRoutes.some((route) => url.pathname.startsWith(route))) {
+    return NextResponse.redirect(new URL("/api/auth/signin", url));
   }
 
   return NextResponse.next();
