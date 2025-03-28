@@ -64,6 +64,10 @@
 }
 
 :root {
+  --chart-1: 222.2 47.4% 11.2%;
+  --chart-2: 215.4 16.3% 46.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.141 0.005 285.823);
