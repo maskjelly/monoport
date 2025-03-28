@@ -49,10 +49,10 @@ export function DashboardHeader() {
 
         {status === "unauthenticated" ? (
           <>
-            <Link href="/login">
+            <Link href="/api/auth/signin">
               <Button variant="secondary">Log In</Button>
             </Link>
-            <Link href="/signup">
+            <Link href="/api/auth/signin">
               <Button>Sign Up</Button>
             </Link>
           </>
