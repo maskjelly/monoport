@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "properties": {
+    "customer_name": {
+      "type": "string",
+      "description": "Name of the customer calling"
+    },
+    "customer_business_type": {
+      "type": "string",
+      "description": "The type of business that the customer runs"
+    }
+  },
+  "required": ["customer_name"]
+}

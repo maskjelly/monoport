@@ -1,0 +1,34 @@
+Things left to do :
+            
+            
+            
+        (done)IMPORTANT : add re-fecthing functionality when reload it refetches 
+
+
+
+            (done)Add skeletons for fetching components 
+            add call data 
+            add overall summary (later)
+            add the number of calls from the same number (Change Schema for this )
+            add requests from the user 
+            add transcriptions
+            Edit button for customer data and logs for edits
+            Invoice generator
+            Setting page for some basic changes (UI MAYBE AND NAME AND EMAIL)
+
+
+            Feat: 
+                Add chatbot system feature as well 
+                add Whatsapp integration
+
+
+            UI CHANGES : 
+            (done)    Fix the client card (different sized)
+                Dashboard Sidebar
+                (done)Make header work better on dashboard (Shift dashboard down)
+                Fix sidebar bottom area (Make create new workable to add customers manually)
+
+
+            Code changes :
+                (done)Make dashboard more modular - (its cluttered - different components for different features)
+                 Signin signup differences

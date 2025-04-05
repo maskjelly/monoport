@@ -1,0 +1,22 @@
+# Node (Next.js)
+web/.next
+web/node_modules
+web/.env.local
+web/.env
+
+# Python (backend)
+backend/__pycache__/
+backend/.venv/
+backend/env/
+backend/.env.local
+
+# Common
+*.log
+.DS_Store
+*.sqlite3
+*.pyc
+.env
+.venv
+*.egg-info/
+.cache
+
