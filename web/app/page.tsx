@@ -60,7 +60,7 @@ const Footer = () => {
                 JetCal
               </h3>
               <p className="text-gray-300 font-['Inter',sans-serif]">
-                Elevating business communication with intelligent automation.
+                Business automation solutions.
               </p>
             </div>
 
@@ -191,16 +191,15 @@ export default function Home() {
                   <>Hello, {session.user?.name}</>
                 ) : (
                   <>
-                    Precision AI for{" "}
+                    AI communication automation{" "}
                     <span className=" drop-shadow-lg font-['Playfair_Display',serif]">
-                      Accelerated Growth
+                      So you focus on BUSINESS
                     </span>
                   </>
                 )}
               </h1>
               <p className="text-xl text-gray-300 max-w-xl mb-8 font-['Inter',sans-serif]">
-                JetCal delivers focused AI solutions that redefine business
-                communication, streamline interactions, and optimize operations.
+                JetCal delivers AI communication automation and customer query reliance 24/7.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 font-['Inter',sans-serif]">
                 <Link href={session ? "/dashboard" : "/api/auth/signin"}>
@@ -258,11 +257,11 @@ export default function Home() {
               {/* Text Content */}
               <div className="space-y-6">
                 <h2 className="text-3xl md:text-4xl font-bold text-white   drop-shadow-lg font-['Playfair_Display',serif]">
-                  Intelligent Solutions for the Modern Enterprise
+                  Fast Paces AI automation for unhinged businesses focused on BUSINESS
                 </h2>
                 <p className="text-lg text-gray-300 font-['Inter',sans-serif]">
                   We deliver focused AI tools to transform communication,
-                  streamline workflows, and elevate customer experiences.
+                  streamline workflows, and better YOUR customer experiences.
                 </p>
               </div>
             </div>
