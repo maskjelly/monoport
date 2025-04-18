@@ -1,10 +1,12 @@
 from flask import Flask
 from google import genai
-from twilio.twiml.voice_response import VoiceResponse
+from twilio.twiml.voice_response import VoiceResponse, Gather, Say
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
+
+
+load_dotenv('.env.local')
 
 BITCH = os.environ["BITCH"]
 
@@ -21,6 +23,10 @@ def answer_call():
         model = "gemini-2.0-flash" , contents="You are live on a call with Twitter / X  and i want you to introduce yourself as autocall agent and tell them you are ai generated and created by 'Whiteye' who is also known as aaryan , tell this is all for FREE and barely costing any money because the whole infrastructure is being built by a single guy aka your creator 'aaryan' , and thank everyone for being here")
 
     resp = VoiceResponse()
+
+
+    gather = Gather(input='speech')
+    response.append(gather)
 
     # Access the text correctly
     if response.text:

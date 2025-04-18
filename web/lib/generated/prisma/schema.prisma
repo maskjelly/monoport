@@ -1,0 +1,39 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Business {
+  id          String     @id @default(cuid())
+  googleId    String?    @unique
+  name        String?
+  email       String?    @unique
+  image       String?
+  phoneNumber String?    @unique // Non-optional, set during onboarding
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  customers   Customer[] // Relation to customers
+}
+
+model Customer {
+  id            String   @id @default(cuid())
+  name          String?
+  agentId       String
+  phoneNumber   String
+  businessPhone String // Non-optional, links to Business.phoneNumber
+  business      Business @relation(fields: [businessPhone], references: [phoneNumber], onDelete: Cascade)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
