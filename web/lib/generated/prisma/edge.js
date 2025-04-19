@@ -173,7 +173,7 @@ const config = {
     "db": {
       "url": {
         "fromEnvVar": "DATABASE_URL",
-        "value": "postgresql://postgres.xcomeppngdunycevxsbd:FRh7tawj6r78i0OR@aws-0-ap-south-1.pooler.supabase.com:5432/postgres?connection_timeout=300&pool_timeout=95&connect_timeout=10&sslmode=require"
+        "value": "postgresql://postgres.xcomeppngdunycevxsbd:FRh7tawj6r78i0OR@aws-0-ap-south-1.pooler.supabase.com:5432/postgres"
       }
     }
   },

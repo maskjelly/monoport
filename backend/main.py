@@ -4,8 +4,6 @@ from twilio.twiml.voice_response import VoiceResponse, Gather, Say
 import os
 from dotenv import load_dotenv
 
-
-
 load_dotenv('.env.local')
 
 BITCH = os.environ["BITCH"]
@@ -24,6 +22,8 @@ def answer_call():
 
     resp = VoiceResponse()
 
+
+    
 
     gather = Gather(input='speech')
     response.append(gather)

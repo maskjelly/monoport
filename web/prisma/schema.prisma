@@ -19,9 +19,9 @@ model Business {
   id          String     @id @default(cuid())
   googleId    String?    @unique
   name        String?
-  email       String?     @unique
+  email       String?    @unique
   image       String?
-  phoneNumber String?     @unique // Non-optional, set during onboarding
+  phoneNumber String?    @unique // Non-optional, set during onboarding
   createdAt   DateTime   @default(now())
   updatedAt   DateTime   @updatedAt
   customers   Customer[] // Relation to customers
